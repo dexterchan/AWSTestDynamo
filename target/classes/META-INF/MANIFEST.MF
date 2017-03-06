@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: samples
+Implementation-Version: 1.0.0
+Built-By: dexter
+Implementation-Vendor-Id: com.amazonaws
+Build-Jdk: 1.8.0_111
+Implementation-URL: http://projects.spring.io/spring-boot/samples/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

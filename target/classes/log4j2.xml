@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+	<Properties>
+		<Property name="log-path">logs</Property>
+	</Properties>
+	
+	<Appenders>
+		<RollingFile name="RollingFile" fileName="${log-path}/Running.log"
+			filePattern="${log-path}/TravelFxConvertRestful-%d{yyyy-MM-dd}-%i.log">
+			<PatternLayout>
+				<pattern>%d %level - %C{1}: %m %F %L %n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="250 MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="20" />
+		</RollingFile>
+	</Appenders>
+	 
+	<Loggers>
+		<Logger name="root" level="debug" additivity="false">
+			<appender-ref ref="RollingFile" level="debug" />
+		</Logger>
+		<Root level="debug" additivity="false">
+			<AppenderRef ref="RollingFile" />
+		</Root>
+		<Root level="info" additivity="false">
+			<AppenderRef ref="RollingFile" />
+		</Root>
+	</Loggers>
+</Configuration>
